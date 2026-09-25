@@ -10,6 +10,8 @@ APP="build/Hushover.app"
 BIN="$APP/Contents/MacOS/Hushover"
 SIGN_IDENTITY="${SIGN_IDENTITY:-Hushover Local Signing}"
 SIGN_KEYCHAIN="${SIGN_KEYCHAIN:-$HOME/Library/Keychains/hushover-signing.keychain-db}"
+# The Mac's own architecture by default; ARCHS="arm64 x86_64" builds a universal app for releases.
+ARCHS="${ARCHS:-$(uname -m)}"
 
 # With only the Command Line Tools installed, the macOS 27 SDK can't be used: its SwiftUI
 # needs a macro plugin that ships with Xcode. Prefer the macOS 26 SDK when it's there.
@@ -28,16 +30,21 @@ while IFS= read -r -d '' file; do SOURCES+=("$file"); done < <(find Sources/Hush
 rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources" "$CACHE"
 
-swiftc \
-    -O \
-    -parse-as-library \
-    -swift-version 6 \
-    -target "$(uname -m)-apple-macos15.0" \
-    -sdk "$SDK" \
-    -module-name Hushover \
-    -module-cache-path "$CACHE/module-cache" \
-    "${SOURCES[@]}" \
-    -o "$BIN"
+SLICES=()
+for arch in $ARCHS; do
+    swiftc \
+        -O \
+        -parse-as-library \
+        -swift-version 6 \
+        -target "$arch-apple-macos15.0" \
+        -sdk "$SDK" \
+        -module-name Hushover \
+        -module-cache-path "$CACHE/module-cache" \
+        "${SOURCES[@]}" \
+        -o "$CACHE/Hushover-$arch"
+    SLICES+=("$CACHE/Hushover-$arch")
+done
+lipo -create "${SLICES[@]}" -output "$BIN"
 
 cp Resources/Info.plist "$APP/Contents/Info.plist"
 cp Resources/AppIcon.icns "$APP/Contents/Resources/AppIcon.icns"

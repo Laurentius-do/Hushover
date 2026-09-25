@@ -52,9 +52,20 @@ If Hushover quits or crashes, every app immediately plays at its normal volume a
 
 ## Installation
 
-Hushover isn't distributed as a download yet; you build it from source. That takes about a minute and doesn't need Xcode.
+Hushover needs macOS 15 or later and runs on Apple Silicon and Intel Macs.
 
-**Requirements:** macOS 15 or later and the Xcode Command Line Tools (`xcode-select --install`).
+### Download
+
+1. Download `Hushover-<version>.zip` from the [latest release](https://github.com/Laurentius-do/Hushover/releases/latest) and unzip it.
+2. Move `Hushover.app` to your Applications folder and open it.
+3. Hushover isn't notarized by Apple, so macOS blocks the first launch. Open **System Settings → Privacy & Security**, scroll down to the message about Hushover and click **Open Anyway**, then confirm.
+4. Allow microphone and system audio recording when macOS asks.
+
+Then open Hushover's menu and create your first rule. To start Hushover automatically, switch on *Launch at login* in its menu.
+
+### Build from source
+
+Takes about a minute and doesn't need Xcode – only the Xcode Command Line Tools (`xcode-select --install`).
 
 ```bash
 git clone https://github.com/Laurentius-do/Hushover.git
@@ -63,7 +74,7 @@ cd Hushover
 ./install.sh                         # builds, installs to /Applications and starts Hushover
 ```
 
-Then open Hushover's menu and create your first rule. To start Hushover automatically, switch on *Launch at login* in its menu. To update, pull the latest changes and run `./install.sh` again.
+To update, pull the latest changes and run `./install.sh` again.
 
 ## Limitations
 
@@ -136,7 +147,7 @@ Tools/                           Signing identity setup, icon generator
 
 | Command | What it does |
 | --- | --- |
-| `./build.sh` | Builds `build/Hushover.app` |
+| `./build.sh` | Builds `build/Hushover.app` for this Mac; `ARCHS="arm64 x86_64" ./build.sh` builds a universal app |
 | `./install.sh` | Builds, quits the running instance, installs to `/Applications`, starts it |
 | `./test.sh` | Builds and runs the unit tests |
 | `./Tools/make-icon.sh` | Regenerates `Resources/AppIcon.icns` from `Tools/make-icon.swift` |
