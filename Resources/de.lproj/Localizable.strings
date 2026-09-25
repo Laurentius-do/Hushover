@@ -1,0 +1,91 @@
+/* German translations. Keys are the English texts from Sources/Hushover/Localization/Strings.swift. */
+
+/* App & menu */
+"Automation Rules" = "Automatik-Regeln";
+"Automation" = "Automatik";
+"Volume per App" = "Lautstärke pro App";
+"No app is playing audio right now." = "Gerade spielt keine App Audio ab.";
+"Show all apps with audio" = "Alle Apps mit Audio anzeigen";
+"No rules yet. A rule lowers an app automatically while someone speaks in a meeting." = "Noch keine Regel. Eine Regel senkt eine App automatisch ab, während in einem Meeting gesprochen wird.";
+"Create First Rule…" = "Erste Regel anlegen…";
+"New rule – not set up yet" = "Neue Regel – noch nicht eingerichtet";
+"Edit Rules…" = "Regeln bearbeiten…";
+"Quit" = "Beenden";
+"About Hushover" = "Über Hushover";
+"Your music makes room when someone speaks." = "Deine Musik macht Platz, wenn gesprochen wird.";
+"Source code on GitHub" = "Quellcode auf GitHub";
+"Currently lowered automatically" = "Wird gerade automatisch abgesenkt";
+"Microphone level" = "Mikrofonpegel";
+"Launch at login" = "Beim Anmelden starten";
+"Still needs to be allowed in Login Items." = "Muss noch in den Anmeldeobjekten erlaubt werden.";
+"Open" = "Öffnen";
+"Hushover – music lowered" = "Hushover – Musik abgesenkt";
+"Volume %@" = "Lautstärke %@";
+"Level %@" = "Pegel %@";
+
+/* Capture problems */
+"Couldn't capture an app's audio" = "Audio einer App konnte nicht abgegriffen werden";
+"Check under Privacy & Security → Screen & System Audio Recording whether Hushover may record system audio." = "Prüfe unter Datenschutz & Sicherheit → Bildschirm- & Systemaudioaufnahme, ob Hushover Systemaudio aufnehmen darf.";
+"Open System Settings" = "Systemeinstellungen öffnen";
+"Try Again" = "Erneut versuchen";
+"Paused so they stay audible: %@" = "Pausiert, damit sie hörbar bleiben: %@";
+
+/* Level meters */
+"Level" = "Pegel";
+"Silence" = "Stille";
+"%@, above the threshold" = "%@, über der Schwelle";
+"%@, below the threshold" = "%@, unter der Schwelle";
+
+/* Rule states */
+"Off" = "Aus";
+"Waiting" = "Wartet";
+"Meeting – quiet" = "Meeting – Stille";
+"You're speaking" = "Du sprichst";
+"Someone is speaking" = "Jemand spricht";
+
+/* Rules window */
+"A rule automatically lowers one app (e.g. your music player) as soon as someone speaks in another app (e.g. your meeting app) – you (microphone) or other participants (the app's audio). During pauses it gets louder again." = "Eine Regel senkt eine App (z. B. deinen Musikplayer) automatisch ab, sobald in einer anderen App (z. B. deiner Meeting-App) gesprochen wird – von dir (Mikrofon) oder von anderen Teilnehmern (Audio der App). In Gesprächspausen wird sie wieder lauter.";
+"Add Rule" = "Regel hinzufügen";
+"New Rule" = "Neue Regel";
+"Choose an app…" = "App auswählen…";
+"Choose both apps to set up the rule." = "Wähle beide Apps aus, um die Regel einzurichten.";
+"Rule enabled" = "Regel aktiv";
+"Make quieter" = "Leiser machen";
+"When someone speaks in" = "Wenn gesprochen wird in";
+"Target and trigger are the same app. The conversation itself would get quieter too, so the rule stays inactive." = "Ziel und Auslöser sind dieselbe App. Dann würde auch das Gespräch selbst leiser – die Regel bleibt deshalb inaktiv.";
+"Volume while someone speaks" = "Lautstärke, während gesprochen wird";
+"Volume during pauses" = "Lautstärke in Gesprächspausen";
+"React to my voice (microphone)" = "Auf meine Stimme reagieren (Mikrofon)";
+"Microphone threshold" = "Schwelle Mikrofon";
+"Stay quiet after speech for" = "Nach Sprache leise halten";
+"Get louder again over" = "Wieder lauter werden über";
+"Delete Rule" = "Regel löschen";
+"Green = above the threshold (counts as speech). Set the threshold just above the background noise. The level appears once the app is running or the microphone is active." = "Grün = über der Schwelle (wird als Sprache gewertet). Stell die Schwelle knapp über das Grundrauschen. Der Pegel erscheint, sobald die App läuft bzw. das Mikrofon aktiv ist.";
+"Only during calls (%@ uses the microphone)" = "Nur während Anrufen (%@ nutzt das Mikrofon)";
+"React to other participants (audio from %@)" = "Auf andere Teilnehmer reagieren (Audio von %@)";
+"%@ threshold" = "Schwelle %@";
+"%@ ↓ during %@" = "%@ ↓ bei %@";
+"%@ s" = "%@ s";
+
+/* Microphone */
+"No microphone access – allow it under Privacy & Security → Microphone." = "Kein Mikrofonzugriff – in Datenschutz & Sicherheit → Mikrofon erlauben.";
+"The microphone uses an unsupported audio format" = "Das Mikrofon nutzt ein nicht unterstütztes Audioformat";
+"Couldn't open the microphone" = "Mikrofon konnte nicht geöffnet werden";
+"Couldn't start the microphone" = "Mikrofon konnte nicht gestartet werden";
+
+/* Core Audio errors */
+"Read property" = "Property lesen";
+"Set stream usage" = "Stream-Nutzung setzen";
+"Couldn't set stream usage" = "Stream-Nutzung konnte nicht gesetzt werden";
+"The output device uses an unsupported audio format" = "Das Ausgabegerät nutzt ein nicht unterstütztes Audioformat";
+"Start microphone" = "Mikrofon starten";
+"%@ failed (OSStatus %@)" = "%@ fehlgeschlagen (OSStatus %@)";
+"Create process tap for %@" = "Process-Tap für %@ erstellen";
+"Create aggregate device for %@" = "Aggregat-Gerät für %@ erstellen";
+"Create audio callback for %@" = "Audio-Callback für %@ anlegen";
+"Start audio for %@" = "Audio für %@ starten";
+"Unexpected stream layout for %@ (%@ instead of %@)" = "Unerwartete Stream-Anordnung für %@ (%@ statt %@)";
+"Tap stream for %@ has an unexpected format" = "Tap-Stream für %@ hat ein unerwartetes Format";
+
+/* App names */
+"Music" = "Musik";

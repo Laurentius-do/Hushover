@@ -1,0 +1,3 @@
+/* German texts for the permission prompts in Info.plist. */
+"NSAudioCaptureUsageDescription" = "Hushover leitet das Audio einzelner Apps durch, um ihre Lautstärke zu regeln und Sprache in Meetings zu erkennen.";
+"NSMicrophoneUsageDescription" = "Hushover misst den Mikrofonpegel, um zu erkennen, wann du sprichst. Es wird nichts aufgezeichnet.";

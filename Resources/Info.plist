@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>CFBundleLocalizations</key>
+    <array>
+        <string>en</string>
+        <string>de</string>
+    </array>
+    <key>CFBundleExecutable</key>
+    <string>Hushover</string>
+    <key>CFBundleIdentifier</key>
+    <string>laurentius.Hushover</string>
+    <key>CFBundleName</key>
+    <string>Hushover</string>
+    <key>CFBundleDisplayName</key>
+    <string>Hushover</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>HushoverRepositoryURL</key>
+    <string>https://github.com/Laurentius-do/Hushover</string>
+    <key>NSHumanReadableCopyright</key>
+    <string>© 2026 Laurentius</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>15.0</string>
+    <key>LSUIElement</key>
+    <true/>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+    <key>NSAudioCaptureUsageDescription</key>
+    <string>Hushover routes the audio of individual apps to control their volume and to detect speech in meetings.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Hushover measures the microphone level to detect when you're speaking. Nothing is recorded.</string>
+</dict>
+</plist>
