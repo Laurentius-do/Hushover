@@ -54,6 +54,14 @@ If Hushover quits or crashes, every app immediately plays at its normal volume a
 
 Hushover needs macOS 15 or later and runs on Apple Silicon and Intel Macs.
 
+### Homebrew
+
+```bash
+brew install --cask laurentius-do/tap/hushover
+```
+
+Then allow the first launch as described in step 3 below. Update with `brew upgrade --cask hushover`.
+
 ### Download
 
 1. Download `Hushover-<version>.zip` from the [latest release](https://github.com/Laurentius-do/Hushover/releases/latest) and unzip it.
